@@ -93,13 +93,10 @@ function esIgual(){
             num1 = Math.sqrt(num2);
         break;
     }
+    fixed();
     refrescar();
     num2 = parseFloat(num1);
     
-}
-
-function refrescar(){
-    document.getElementById("display").textContent = num1;
 }
 
 function limpiar(){
