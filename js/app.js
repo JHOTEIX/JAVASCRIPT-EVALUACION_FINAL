@@ -31,6 +31,7 @@ function displayNum(numero){
     }else{
         num1 += numero;
     }
+    num1=num1.slice(0,4);
     refrescar();
 }
 
@@ -92,7 +93,6 @@ function esIgual(){
             num1 = Math.sqrt(num2);
         break;
     }
-    
     refrescar();
     num2 = parseFloat(num1);
     
