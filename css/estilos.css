@@ -49,6 +49,7 @@ body{
   src: url("../fonts/digital.ttf");
 }
 #display{
+  width: 354px;
   font-family: digital;
   font-size: 5em;
 }
