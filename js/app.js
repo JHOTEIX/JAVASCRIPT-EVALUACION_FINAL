@@ -1,3 +1,4 @@
+var mdCalculadora = (function(document, undefined){
 //Declaracion de variables
 var num1 = 0, num2 = 0, opera, sign;
 
@@ -85,7 +86,7 @@ function displayNum(numero){
     }else{
         num1 += numero;
     }
-    num1=num1.slice(0,7);
+    num1=num1.slice(0,8);
     refrescar();
 }
 
@@ -139,10 +140,9 @@ function esIgual(){
             num1 = Math.sqrt(num2);
         break;
     }
-    refrescar();
-    num2 = parseFloat(num1);
-    
+    refrescar();;
 }
+
 function refrescar(){
     if (num1 % 1 == 0) {
         num1=num1;
@@ -150,11 +150,10 @@ function refrescar(){
         num1=parseFloat(num1);
         num1=num1.toFixed(2);
         }
-    if(num1>9999999){
+    if(num1>99999999){
         num1=num1.toString();
         num1=num1.slice(0,7);
         num1=parseFloat(num1);
-        num1=num1.toFixed(2);
     }
     document.getElementById('display').textContent = num1;
 }
@@ -162,3 +161,7 @@ function refrescar(){
 function limpiar(){
     display.textContent = "";
 }
+
+})(document);
+
+mdCalculadora.init();
